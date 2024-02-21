@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--Gradient-B, linear-gradient(98deg, #06030B 0%, #3C1768 100%));
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    flex-shrink: 0;
+    position: fixed;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(25px);
+    align-items: center;
+    z-index: 4;
+}
+
+header img{
+    width: 150px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--Brand-Colors-VR-White, #F3EFF5);
+    text-align: center;
+    font-family: "JetBrains Mono";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.inicio {
+    display: flex;
+    width: 100%;
+    height: 1080px;
+
+}
+
+.sobre {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 1080px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.video {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.sleft {
+    display: flex;
+    flex-direction: column;
+    width: 861px;
+    height: 1080px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(243, 239, 245, 0.15) 0%, rgba(243, 239, 245, 0.00) 100%, rgba(243, 239, 245, 0.00) 100%);
+    backdrop-filter: blur(7.199999809265137px);
+    padding: 125px 50px;
+    box-sizing: border-box;
+    margin-left: 100px;
+}
+
+.up1 {
+    color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -7.68px;
+    text-transform: uppercase;
+}
+
+.up2 {
+    color: #FFF;
+    text-align: justify;
+    font-family: "JetBrains Mono";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -2.4px;
+}
+
+.sdown {
+    display: flex;
+    flex-direction: row;
+}
+
+.sd {
+    display: flex;
+    flex-direction: column;
+}
+
+.sd1 {
+    color: #FFF;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sd2 {
+    color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.projetos {
+    display: flex;
+    position: relative;
+    height: 1080px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 126px;
+}
+
+.projetosup {
+    display: flex;
+    position: relative;
+    width: 100%;
+    color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -7.68px;
+    text-transform: uppercase;
+    bottom: 50%;
+}
+
+.carrosel {
+    display: inline-flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    width: 1816px;
+    height: 509px;
+    cursor: grab;
+}
+
+.carrosel:active {
+    cursor: grabbing;
+}
+
+.left {
+    display: flex;
+    width: 550px;
+    height: 450px;
+    flex-direction: column;
+    gap: 25px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#img1,
+#img2,
+#img3,
+#img4 {
+    display: none;
+    position: absolute;
+    background-size: cover;
+    width: 450px;
+    height: 450px;
+    top: 5%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#img1 {
+    display: flex;
+    background-image: url(img1.jpg);
+    opacity: 1;
+}
+
+#img2 {
+    display: flex;
+    background-image: url(img2.jpg);
+}
+
+#img3 {
+    display: flex;
+    background-image: url(img3.jpg);
+}
+
+#img4 {
+    display: flex;
+    background-image: url(img4.jpg);
+}
+
+.points {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 9%;
+    height: 2%;
+    justify-content: space-between;
+    bottom: 15%;
+}
+
+.point {
+    display: flex;
+    width: 6%;
+    height: 100%;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+.right {
+    display: flex;
+    width: 550px;
+    height: 450px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    flex-shrink: 0;
+    margin-top: -2%;
+}
+
+h1 {
+    color: var(--Brand-Colors-VR-White, #F3EFF5);
+    font-family: "JetBrains Mono";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -3.84px;
+    margin-bottom: 0;
+}
+
+.carrosel text {
+    color: #A9A9A9;
+    font-family: "JetBrains Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: -1.28px;
+    margin-bottom: -2%;
+}
+
+.carrosel a {
+    display: flex;
+    width: 40%;
+    height: 10%;
+    padding: 15px 34px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: var(--edge-roundness, 10px);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--Brand-Colors-VR-White, #F3EFF5);
+    text-align: center;
+    font-family: "JetBrains Mono";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.56px;
+
+}
+
+.carrosel a:hover {
+    background-color: #812CE5;
+}
+
+.car {
+    display: flex;
+    width: 65%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: start;
+    justify-content: start;
+    margin-left: -3%;
+    margin-right: 3%;
+}
+
+.car:hover {
+    background-color: #0F051B;
+}
+
+
+h2 {
+    color: var(--Brand-Colors-VR-White, #F3EFF5);
+    font-family: "JetBrains Mono";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.6px;
+}
+
+.equipe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1381px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding: 125px 400px;
+    background: var(--Gradient-A, url(fundo.png), lightgray 50% / cover no-repeat);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.equipetext {
+    display: flex;
+    width: 100%;
+    color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -7.68px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.separador {
+    display: flex;
+    height: 2px;
+    width: 100%;
+    align-self: stretch;
+    stroke-width: 2px;
+    background-color: white;
+    opacity: 0.2;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 25px 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.grid-item {
+    display: flex;
+    width: 275px;
+    height: 364.5px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.im {
+    display: flex;
+    width: 275px;
+    height: 275px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome {
+    color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: -2.56px;
+}
+
+.insta {
+    color: var(--Brand-Colors-VR-Purple, #812CE5);
+    font-family: "JetBrains Mono";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -1.92px;
+}
+
+.grid-item:first-child .im {
+    align-items: center;
+    justify-content: center;
+    background-color: #812CE5;
+}
+
+.grid-item:nth-child(2) .im {
+    background-color: #4BDBAB;
+}
+
+.grid-item:nth-child(3) .im {
+    background-color: #00A7E1;
+}
+
+.grid-item:nth-child(4) .im {
+    background-color: #00A7E1;
+}
+
+.grid-item:nth-child(5) .im {
+    background-color: #00A7E1;
+}
+
+.grid-item:nth-child(6) .im {
+    background-color: #812CE5;
+}
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(94deg, #000 3.28%, rgba(0, 0, 0, 0.81) 100%);
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.fup {
+    display: inline-flex;
+    height: 464px;
+    padding: 50px 0px 100px 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.fup img {
+    margin-bottom: 50px;
+}
+
+.fup a {
+    color: var(--Brand-Colors-VR-White, #F3EFF5);
+    text-align: center;
+    font-family: "JetBrains Mono";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+}
+
+.fup a:hover {
+    text-decoration-line: underline;
+}
+
+.fup img {
+    width: 20%;
+}
+
+.fdown {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--Brand-Colors-VR-Purple, #812CE5);
+    font-family: "JetBrains Mono";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fd {
+    display: flex;
+    color: var(--Brand-Colors-VR-White, #F3EFF5);
+    font-family: "JetBrains Mono";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -1.6px;
+}
+
+.fd:hover {
+    text-decoration-line: underline;
+}
+
+.fleft {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logos {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 25px;
+    align-items: center;
+}
